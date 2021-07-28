@@ -1,0 +1,49 @@
+				----->Serialization<----
+1.What is Serialization?
+		Serialization in Java is a mechanism of writing the state of an object 
+		into a byte-stream.
+		..................................................................................
+		
+2.What is Deserialization?
+		The reverse operation of serialization is called deserialization where 
+		byte-stream is converted into an object.
+		
+
+Note:serialization and deserialization process is platform-independent,
+		 it means you can serialize an object in a platform and deserialize in different platform.
+.......................................................................................................................		 
+		 
+3.What are the steps to follow to create serializable object?
+
+	Step 1.implement serializable class.
+	
+	java.io.Serializable interface?
+		Serializable is a marker interface (has no data member and method). 
+			It is used to "mark" Java classes so that the objects of these classes may get a certain capability.
+			 The Cloneable and Remote are also marker interfaces.
+
+		It must be implemented by the class whose object you want to persist.
+
+		The String class and all the wrapper classes implement the java.io.Serializable interface by default.
+	
+	
+	Step 2. use ObjectOutputStream,ObjectInputStream classes to serialize and de-serialize
+	Step 3. methods of writeObject and readObject
+.........................................................................................................................	
+4.what is the advantage of serialization?
+	It is mainly used to travel object's state on the network (which is known as marshaling).
+
+.......................................................................................................................
+	
+5.Java Serialization with Inheritance (IS-A Relationship)?
+
+	If a class implements serializable then all its sub classes will also be serializable. 
+	
+	Now you can serialize the Student class object that extends the Person class which is Serializable. 
+	Parent class properties are inherited to subclasses so if parent class is Serializable, subclass would also be.
+.........................................................................................................................
+
+
+
+		
+		
